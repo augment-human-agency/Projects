@@ -1,0 +1,37 @@
+examples/
+├── README.md                                   # Overview of examples
+├── quickstart/                                 # Getting started examples
+│   ├── basic_memory_operations.py              # Simple store/retrieve operations
+│   ├── memory_layers_demo.py                   # Working with different memory layers
+│   └── api_server_quickstart.py                # Starting and using the API server
+├── memory_systems/                             # Memory-focused examples
+│   ├── hierarchical_memory.py                  # Using hierarchical memory layers
+│   ├── recursive_knowledge_refinement.py       # Demonstrating knowledge evolution
+│   ├── context_aware_recall.py                 # Contextual memory retrieval
+│   ├── meta_cognition_demo.py                  # Self-reflection and memory refinement
+│   └── memory_decay_rejuvenation.py            # Working with memory decay
+├── integrations/                               # Integration examples
+│   ├── llm_augmentation/                       # Augmenting language models
+│   │   ├── openai_integration.py               # Integration with OpenAI API
+│   │   └── huggingface_integration.py          # Integration with HuggingFace models
+│   ├── vector_db_examples/                     # Vector database integrations
+│   │   ├── faiss_standalone.py                 # FAISS vector database usage
+│   │   └── postgres_vector_store.py            # PostgreSQL with vector extensions
+│   └── web_frameworks/                         # Web framework integrations
+│       ├── fastapi_integration.py              # Integration with FastAPI
+│       └── flask_integration.py                # Integration with Flask
+├── applications/                               # Real-world applications
+│   ├── research_assistant/                     # Research assistant application
+│   │   ├── app.py                              # Main application file
+│   │   └── memory_config.py                    # Memory configuration
+│   ├── conversational_agent/                   # Conversational agent with memory
+│   │   ├── agent.py                            # Agent implementation
+│   │   └── dialogue_manager.py                 # Dialogue management with memory
+│   └── knowledge_base/                         # Self-evolving knowledge base
+│       ├── kb_server.py                        # Knowledge base server
+│       └── knowledge_refinement.py             # Knowledge refinement process
+└── advanced/                                   # Advanced usage examples
+    ├── custom_memory_layers.py                 # Creating custom memory layers
+    ├── domain_specific_adaptation.py           # Domain-specific memory adaptation
+    ├── distributed_memory_orchestration.py     # Distributed memory systems
+    └── performance_optimization.py             # Optimizing performance

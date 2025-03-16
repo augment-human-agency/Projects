@@ -1,0 +1,12 @@
+onnxruntime
+numpy
+torch
+tensorflow
+tvm
+onnx
+scipy
+matplotlib
+bitstring
+pyverilog
+pynq
+hdlparse

@@ -1,0 +1,12 @@
+# Basic installation
+pip install augment-sdk
+
+# With optional components
+pip install augment-sdk[postgresql]
+pip install augment-sdk[gpu]
+
+# For development
+pip install augment-sdk[dev]
+
+# Install everything
+pip install augment-sdk[all]

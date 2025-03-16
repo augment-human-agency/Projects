@@ -1,0 +1,49 @@
+# Augment SDK Core Dependencies
+fastapi>=0.105.0,<0.110.0
+uvicorn>=0.25.0,<0.30.0
+pydantic>=2.5.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+loguru>=0.7.0,<0.8.0
+
+# Memory Management and Vector Databases
+faiss-cpu>=1.7.4,<2.0.0  # Use faiss-gpu for GPU support
+numpy>=1.24.0,<2.0.0
+scipy>=1.11.0,<2.0.0
+
+# Embeddings and ML
+transformers>=4.35.0,<5.0.0
+torch>=2.1.0,<3.0.0
+sentence-transformers>=2.2.2,<3.0.0
+
+# Storage and Caching
+redis>=5.0.0,<6.0.0
+sqlalchemy>=2.0.0,<3.0.0
+alembic>=1.12.0,<2.0.0
+psycopg2-binary>=2.9.9,<3.0.0  # For PostgreSQL support
+
+# API and Networking
+httpx>=0.25.0,<0.30.0
+tenacity>=8.2.3,<9.0.0  # For retries and backoff
+starlette>=0.27.0,<0.30.0
+
+# Utilities
+python-multipart>=0.0.6,<0.1.0  # For handling form data and file uploads
+pyyaml>=6.0.1,<7.0.0  # For configuration
+typer>=0.9.0,<0.10.0  # For CLI interfaces
+rich>=13.6.0,<14.0.0  # For rich terminal output
+
+# Testing
+pytest>=7.4.3,<8.0.0
+pytest-asyncio>=0.21.1,<0.22.0
+pytest-cov>=4.1.0,<5.0.0
+
+# Documentation
+mkdocs>=1.5.3,<2.0.0
+mkdocs-material>=9.4.7,<10.0.0
+
+# Development
+black>=23.11.0,<24.0.0
+isort>=5.12.0,<6.0.0
+mypy>=1.7.0,<2.0.0
+flake8>=6.1.0,<7.0.0
+pre-commit>=3.5.0,<4.0.0

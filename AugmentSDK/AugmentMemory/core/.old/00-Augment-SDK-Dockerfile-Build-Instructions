@@ -1,0 +1,11 @@
+# Build the image
+docker build -t augment-sdk:latest .
+
+# Run the container
+docker run -p 8000:8000 augment-sdk:latest
+
+# Run with custom configuration
+docker run -p 8000:8000 \
+  -e AUGMENT_API_LOG_LEVEL=debug \
+  -e CUSTOM_VARIABLE=value \
+  augment-sdk:latest

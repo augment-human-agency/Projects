@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">AugmentSDK Memory Layers</text>
+  
+  <!-- Memory layers (concentric circles) -->
+  <g transform="translate(400, 320)">
+    <!-- Outer layer: Predictive Memory -->
+    <circle cx="0" cy="0" r="250" fill="#e6f7ff" stroke="#0099ff" stroke-width="2" opacity="0.7" />
+    <text x="0" y="-230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#0066cc">Predictive Memory</text>
+    <text x="0" y="-210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Anticipates future knowledge needs</text>
+    
+    <!-- Reflective Memory -->
+    <circle cx="0" cy="0" r="200" fill="#e6ffe6" stroke="#00cc66" stroke-width="2" opacity="0.8" />
+    <text x="0" y="-180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#009933">Reflective Memory</text>
+    <text x="0" y="-160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#009933">Self-optimization & meta-cognition</text>
+    
+    <!-- Procedural Memory -->
+    <circle cx="0" cy="0" r="150" fill="#fff2e6" stroke="#ff9933" stroke-width="2" opacity="0.8" />
+    <text x="0" y="-130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#cc6600">Procedural Memory</text>
+    <text x="0" y="-110" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#cc6600">How-to & process learning</text>
+    
+    <!-- Semantic Memory -->
+    <circle cx="0" cy="0" r="100" fill="#f7e6ff" stroke="#9933ff" stroke-width="2" opacity="0.8" />
+    <text x="0" y="-80" font-family="Arial, sans-serif" font-size

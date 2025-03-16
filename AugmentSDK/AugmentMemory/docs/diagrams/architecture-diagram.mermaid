@@ -1,0 +1,53 @@
+flowchart TB
+    User([User/Application]) <--> API[FastAPI Endpoints]
+    
+    subgraph AugmentSDK
+        API <--> MM[Memory Manager]
+        
+        subgraph Memory Components
+            MM <--> VS[Vector Store]
+            MM <--> MR[Memory Retrieval]
+            MM <--> MC[Meta Cognition]
+            MM <--> MD[Memory Decay]
+            MM <--> CM[Cache Manager]
+        end
+        
+        subgraph Memory Layers
+            VS --- EM[Ephemeral Memory]
+            VS --- WM[Working Memory]
+            VS --- SM[Semantic Memory]
+            VS --- PM[Procedural Memory]
+            VS --- RM[Reflective Memory]
+            VS --- PDM[Predictive Memory]
+        end
+        
+        subgraph Utilities
+            MM --- CFG[Config]
+            MM --- LOG[Logger]
+            VS --- VU[Vector Utils]
+            MR --- QP[Query Parser]
+        end
+        
+        subgraph Ethics Module
+            MM -.-> EG[Ethics Governance]
+            EG --- DJ[Divine Justice]
+            EG --- WE[Wisdom Engine]
+            EG --- TJ[Transformative Justice]
+        end
+    end
+    
+    VS <--> FAISS[(FAISS/Vector DB)]
+    CM <--> Cache[(Cache Storage)]
+    
+    classDef core fill:#f9f,stroke:#333,stroke-width:2px
+    classDef memory fill:#bbf,stroke:#333,stroke-width:1px
+    classDef util fill:#fbb,stroke:#333,stroke-width:1px
+    classDef ethics fill:#bfb,stroke:#333,stroke-width:1px
+    classDef external fill:#ddd,stroke:#333,stroke-width:1px
+    
+    class MM,API core
+    class VS,MR,MC,MD,CM memory
+    class EM,WM,SM,PM,RM,PDM memory
+    class CFG,LOG,VU,QP util
+    class EG,DJ,WE,TJ ethics
+    class FAISS,Cache external

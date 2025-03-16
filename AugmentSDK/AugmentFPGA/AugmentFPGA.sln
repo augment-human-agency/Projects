@@ -1,0 +1,8 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# If using Quartus or Vivado, adapt accordingly
+
+Project("AugmentFPGA") = "AugmentFPGA", "src/", "{FPGA-UUID}"
+    ProjectSection(ProjectDependencies) = postProject
+        {FPGA-UUID} = {FPGA-UUID}
+    EndProjectSection
+EndProject

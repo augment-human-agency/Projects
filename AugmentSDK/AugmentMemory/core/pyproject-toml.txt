@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel>=0.37.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "augment-sdk"
+version = "0.1.0"
+description = "SDK for advanced AI memory systems with hierarchical memory layers and recursive learning"
+readme = "README.md"
+authors = [
+    {name = "Augment Human Agency", email = "dev@augmenthumanagency.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.105.0,<0.110.0",
+    "uvicorn>=0.25.0,<0.30.0",
+    "pydantic>=2.5.0,<3.0.0",
+    "python-dotenv>=1.0.0,<2.0.0",
+    "loguru>=0.7.0,<0.8.0",
+    "faiss-cpu>=1.7.4,<2.0.0",
+    "numpy>=1.24.0,<2.0.0",
+    "scipy>=1.11.0,<2.0.0",
+    "transformers>=4.35.0,<5.0.0",
+    "torch>=2.1.0,<3.0.0",
+    "sentence-transformers>=2.2.2,<3.0.0",
+    "redis>=5.0.0,<6.0.0",
+    "sqlalchemy>=2.0.0,<3.0.0",
+    "alembic>=1.12.0,<2.0.0",
+    "httpx>=0.25.0,<0.30.0",
+    "tenacity>=8.2.3,<9.0.0",
+    "starlette>=0.27.0,<0.30.0",
+    "python-multipart>=0.0.6,<0.1.0",
+    "pyyaml>=6.0.1,<7.0.0",
+    "typer>=0.9.0,<0.10.0",
+    "rich>=13.6.0,<14.0.0",
+]
+
+[project.optional-dependencies]
+postgresql = [
+    "psycopg2-binary>=2.9.9,<3.0.0",
+]
+gpu = [
+    "faiss-gpu>=1.7.4,<2.0.0",
+]
+test = [
+    "pytest>=7.4.3,<8.0.0",
+    "pytest-asyncio>=0.21.1,<0.22.0",
+    "pytest-cov>=4.1.0,<5.0.0",
+    "pytest-mock>=3.10.0,<4.0.0",
+]
+docs = [
+    "mkdocs>=1.5.3,<2.0.0",
+    "mkdocs-material>=9.4.7,<10.0.0",
+    "mkdocstrings>=0.22.0,<0.23.0",
+    "mkdocstrings-python>=1.7.0,<2.0.0",
+]
+dev = [
+    "black>=23.11.0,<24.0.0",
+    "isort>=5.12.0,<6.0.0",
+    "mypy>=1.7.0,<2.0.0",
+    "flake8>=6.1.0,<7.0.0",
+    "pre-commit>=3.5.0,<4.0.0",
+]
+all = [
+    "augment-sdk[postgresql,gpu,test,docs,dev]",
+]
+
+[project.urls]
+"Homepage" = "https://augmenthumanagency.com"
+"Repository" = "https://github.com/augment-human-agency/augment-sdk"
+"Documentation" = "https://docs.augmenthumanagency.com"
+"Bug Tracker" = "https://github.com/augment-human-agency/augment-sdk/issues"
+
+[project.scripts]
+augment-api = "augment_sdk.api.main:start"
+
+[tool.setuptools]
+packages = ["augment_sdk"]
+
+[tool.setuptools.package-data]
+augment_sdk = ["py.typed", "**/*.json", "**/*.yaml"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39", "py310", "py311"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_optional = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+asyncio_mode = "auto"

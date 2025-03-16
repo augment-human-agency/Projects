@@ -1,0 +1,125 @@
+{
+  "project": "augment-sdk",
+  "modules": {
+    "memory": {
+      "description": "Memory orchestration and dynamic memory systems",
+      "components": {
+        "memory_manager.py": {
+          "description": "Core controller for all memory operations",
+          "dependencies": ["vector_store", "memory_retrieval", "meta_cognition", "memory_decay"],
+          "functions": [
+            "store_memory(key, data, layer='semantic')",
+            "retrieve_memory(query, layer='semantic')",
+            "prune_memory()",
+            "reflect()"
+          ],
+          "testing": ["test_store_retrieve", "test_memory_reflection"]
+        },
+        "vector_store.py": {
+          "description": "Embedding storage & retrieval with FAISS/Vector DB",
+          "dependencies": ["vector_utils"],
+          "functions": [
+            "embed(data)",
+            "store(key, embedding, layer='semantic')",
+            "query(query_vector, top_k=5)"
+          ],
+          "testing": ["test_embedding", "test_vector_query"]
+        },
+        "meta_cognition.py": {
+          "description": "Self-reflective memory analysis and reweighting",
+          "dependencies": [],
+          "functions": [
+            "evaluate_memory(key, data)",
+            "self_reflect(vector_store)",
+            "reweight_memory(memory_key, weight_adjustment)"
+          ],
+          "testing": ["test_memory_evaluation", "test_self_reflection"]
+        },
+        "memory_decay.py": {
+          "description": "Implements memory decay and rejuvenation strategies",
+          "dependencies": ["vector_store"],
+          "functions": [
+            "apply_decay(vector_store, decay_rate=0.05)",
+            "rejuvenate_memory(key, boost_factor=1.2)",
+            "calculate_relevance_score(memory_data, current_context)"
+          ],
+          "testing": ["test_memory_decay", "test_memory_rejuvenation"]
+        },
+        "dynamic_adapter.py": {
+          "description": "Domain-specific memory adjustment and fine-tuning",
+          "dependencies": ["meta_cognition", "vector_store"],
+          "functions": [
+            "adjust_memory_weights(domain, context)",
+            "fine_tune_memory(domain_data)",
+            "create_domain_profile(domain_name, key_concepts=[])"
+          ],
+          "testing": ["test_domain_adaptation", "test_memory_fine_tuning"]
+        },
+        "memory_retrieval.py": {
+          "description": "Advanced query processing and memory retrieval",
+          "dependencies": ["vector_store", "query_parser"],
+          "functions": [
+            "query_memory(query_text, layer='semantic', limit=10)",
+            "contextual_search(query, context_data)",
+            "temporal_retrieval(query, time_range=None)"
+          ],
+          "testing": ["test_semantic_search", "test_contextual_retrieval"]
+        }
+      },
+      "utils": {
+        "config.py": {
+          "description": "Configuration settings and environment management",
+          "dependencies": [],
+          "functions": [
+            "load_config(path=None)",
+            "get_default_config()",
+            "validate_config(config)"
+          ],
+          "testing": ["test_config_loading", "test_config_validation"]
+        },
+        "logger.py": {
+          "description": "Logging and monitoring utilities",
+          "dependencies": [],
+          "functions": [
+            "setup_logger(name, level='INFO')",
+            "log_memory_operation(operation, key, status)",
+            "get_memory_stats()"
+          ],
+          "testing": ["test_logger_setup", "test_operation_logging"]
+        },
+        "vector_utils.py": {
+          "description": "Vector manipulation and embedding utilities",
+          "dependencies": [],
+          "functions": [
+            "embed_text(text, dim=512)",
+            "normalize_vector(vector)",
+            "calculate_similarity(vec1, vec2)"
+          ],
+          "testing": ["test_text_embedding", "test_vector_similarity"]
+        },
+        "query_parser.py": {
+          "description": "Parses and structures complex memory queries",
+          "dependencies": [],
+          "functions": [
+            "parse_query(query_text)",
+            "extract_keywords(text)",
+            "identify_query_intent(query_text)"
+          ],
+          "testing": ["test_query_parsing", "test_keyword_extraction"]
+        }
+      },
+      "api": {
+        "memory_api.py": {
+          "description": "FastAPI endpoints for memory operations",
+          "dependencies": ["memory_manager"],
+          "functions": [
+            "store_memory_endpoint(request)",
+            "retrieve_memory_endpoint(query)",
+            "reflect_endpoint()"
+          ],
+          "testing": ["test_api_store", "test_api_retrieve"]
+        }
+      }
+    }
+  }
+}
