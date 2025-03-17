@@ -1,0 +1,27 @@
+# Augment Human Agency Custom License (AHA-CL)
+
+Copyright (c) 2025 Augment Human Agency
+
+## 1. Intellectual Property Rights
+All original code, methodologies, architectures, and frameworks within this repository are the intellectual property of Augment Human Agency (AHA). By accessing this repository, you acknowledge that AHA retains all rights, titles, and interests in the proprietary elements of this project, including but not limited to Safe Sage Module, Augment Baby SDK, and all AGI-specific methodologies.
+
+## 2. Permissible Use
+### 2.1 Open Source & Non-Commercial Use
+- You are free to use, modify, and distribute this software for educational and non-commercial purposes, provided you attribute the original work to AHA.
+- Contributions to this project are welcome under the terms of this license. All contributions will be governed by the same terms and become part of the open-source framework.
+
+### 2.2 Commercial Use
+- Commercial use, including but not limited to embedding this software into proprietary products, reselling, or offering as a service, requires a commercial license. Contact Augment Human Agency at [info@augmenthumanagency.com] for licensing inquiries.
+- Proprietary methodologies and enterprise-specific strategies such as ERP integrations, customized frameworks, and advanced self-modifying architectures are not covered under the open-source license and require a separate commercial agreement.
+
+## 3. Ethical Use Clause
+- The software shall not be used in applications or systems that contribute to harm, exploitation, or the violation of human rights.
+- Any use of this software in economic, demographic, or predatory systems that do not align with the principles of enhancing human potential and promoting fairness is strictly prohibited.
+
+## 4. Liability & Warranty Disclaimer
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## 5. Amendments & Updates
+AHA reserves the right to update this license as necessary to reflect evolving project needs and ethical standards. All updates will be documented and made available in this repository.
+
+For questions regarding licensing, contributions, or commercial use, please contact [info@augmenthumanagency.com].
